@@ -1,0 +1,13 @@
+**/node_modules/*
+support/*
+cypress/screenshots/*
+cypress/videos/*
+yarn-error.log
+mochawesome-report/
+mochawesome.json
+.idea/
+cypress/results/
+cypress/fixtures/testData/testDataSchema/**/*.js
+.vscode
+node_modules
+cypress_cache
