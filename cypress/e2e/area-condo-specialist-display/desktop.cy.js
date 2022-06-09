@@ -12,7 +12,7 @@ const saleAndRentSelector =
   "div[class^=AgentSpecialistCardstyle__ListingsCount]";
 const phoneNumberSelector = "div[class^AgentSpecialistCardstyle__PhoneNumber]";
 
-const AGENTS_DATA = [
+const AREA_AGENTS_DATA = [
   {
     name: "Gwen Ng",
     contact: "+60169173331",
@@ -89,8 +89,8 @@ describe("Area/Condo Specialist display", () => {
 
     // TOOD: all selector should be exist
 
-    // TOOD: all title should be same total count as AGENTS_DATA
-    
-    // TODO: the first agent should be found in AGENTS_DATA
+    // TOOD: all title should be same total count as AREA_AGENTS_DATA
+
+    // TODO: the first agent should be found in AREA_AGENTS_DATA
   });
 });

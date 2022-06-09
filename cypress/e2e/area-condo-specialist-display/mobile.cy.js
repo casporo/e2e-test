@@ -8,6 +8,48 @@ const containerSelector =
 // TODO: find title
 const titleSelector = "";
 
+// TODO: find agency name
+const agencyNameSelector = "";
+const saleAndRentSelector =
+  "div[class^=AgentSpecialistCardstyle__ListingsCount]";
+const phoneNumberSelector = "div[class^AgentSpecialistCardstyle__PhoneNumber]";
+
+const AREA_AGENTS_DATA = [
+  {
+    name: "Michelle Cheong",
+    contact: "+60165020868",
+    agency: "Landbanc Property Sdn. Bhd.",
+    channelCounts: { sale: 84, rent: 77 },
+  },
+  {
+    name: "Don Lee",
+    contact: "+60124700765",
+    agency: "Metro City Realtors Sdn. Bhd. (MK)",
+    channelCounts: { sale: 321, rent: 24 },
+  },
+  {
+    name: "Kevin Teh",
+    contact: "+60135557333",
+    agency: "IQI Realty Sdn Bhd - Desa Sri Hartamas",
+    channelCounts: { sale: 25, rent: 29 },
+  },
+  {
+    name: "Cruz Looi",
+    contact: "+60166526358",
+    agency: "Kith and Kin Realty Sdn. Bhd.",
+    channelCounts: { sale: 9, rent: 19 },
+  },
+];
+
+const CONDO_AGENTS_DATA = [
+  {
+    name: "Cindy Ng",
+    contact: "+60129881017",
+    agency: "JANWELL PROPERTIES SDN BHD",
+    channelCounts: { sale: 17, rent: 15 },
+  },
+];
+
 describe(
   "Area/Condo Specialist display",
   {
@@ -39,6 +81,13 @@ describe(
       // TODO: if api still loading, skeleton exist else container
 
       cy.get(titleSelector).should("contain", "Condo specialists for");
+
+      // TODO: all title should be same total count as CONDO_AGENTS_DATA
+
+      cy.get(saleAndRentSelector).should(
+        "contain",
+        `${CONDO_AGENTS_DATA[0].channelCounts.sale} for sale | ${CONDO_AGENTS_DATA[0].channelCounts.rent} for rent`
+      );
 
       // TODO: scroll after 9th cards
 
