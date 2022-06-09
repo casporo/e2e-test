@@ -87,9 +87,9 @@ describe("Area/Condo Specialist display", () => {
 
     cy.get(containerSelector).should("exist");
 
-    // TOOD: all selector should be exist
+    // TOOD: title, subtitle should be exist
 
-    // TOOD: all title should be same total count as AREA_AGENTS_DATA
+    // TOOD: all agent name should be same total count as AREA_AGENTS_DATA
 
     // TODO: the first agent should be found in AREA_AGENTS_DATA
   });
