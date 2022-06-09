@@ -1,5 +1,13 @@
 /// <reference types="cypress" />
 
+const skeletonSelector =
+  "div[class^=AgentSpecialistAsyncComponentsstyle__AgentSpecialistSkeletonWrapper]";
+const containerSelector =
+  "div[class^=AgentSpecialistAsyncComponentsstyle__AgentSpecialistCarouselPlaceholder]";
+
+// TODO: find title
+const titleSelector = "";
+
 describe(
   "Area/Condo Specialist display",
   {
@@ -7,19 +15,16 @@ describe(
     viewportHeight: 667,
   },
   () => {
-    beforeEach(() => {});
-
     it("Area search", () => {
-      const skeletonSelector =
-        "div[class^=AgentSpecialistAsyncComponentsstyle__AgentSpecialistSkeletonWrapper]";
-      const containerSelector =
-        "div[class^=AgentSpecialistAsyncComponentsstyle__AgentSpecialistCarouselPlaceholder]";
-      const titleSelector =
-        "div[class^=AgentSpecialistDesktopCarouselstyle__Title]";
-
       cy.visit("https://www.iproperty.com.my/sale/klcc/all-residential/");
 
       cy.get(containerSelector).should("not.inViewport");
+
+      // TODO: scroll after 5th cards
+
+      // TODO: if api still loading, skeleton exist else container
+
+      cy.get(titleSelector).should("contain", "Area specialists for");
     });
 
     it("Condo search", () => {
@@ -27,16 +32,23 @@ describe(
         "https://www.iproperty.com.my/sale/mont-kiara/all-residential/?propertyId=69cb1a1af3d44ad4a087d0d9ca88fe81&property=Residensi%2022"
       );
 
-      const skeletonSelector =
-        "div[class^=AgentSpecialistAsyncComponentsstyle__AgentSpecialistSkeletonWrapper]";
-      const containerSelector =
-        "div[class^=AgentSpecialistAsyncComponentsstyle__AgentSpecialistCarouselPlaceholder]";
-      const titleSelector =
-        "div[class^=AgentSpecialistDesktopCarouselstyle__Title]";
-
       cy.get(containerSelector).should("not.inViewport");
-    });
 
-    it("Condo search - lesser than 5 listing", () => {});
+      // TODO: scroll after 5th cards
+
+      // TODO: if api still loading, skeleton exist else container
+
+      cy.get(titleSelector).should("contain", "Condo specialists for");
+
+      // TODO: scroll after 9th cards
+
+      // TODO: if api still loading, skeleton exist else container
+
+      cy.get(containerSelector)
+        .find(titleSelector)
+        .should("contain", "Area specialists for")
+        .and()
+        .should("inViewport");
+    });
   }
 );
