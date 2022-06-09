@@ -6,7 +6,8 @@ const containerSelector =
   "div[class^=AgentSpecialistAsyncComponentsstyle__AgentSpecialistCarouselPlaceholder]";
 
 // TODO: find title
-const titleSelector = "";
+const titleSelector =
+        "";
 
 // TODO: find agency name
 const agencyNameSelector = "";
@@ -52,10 +53,6 @@ const CONDO_AGENTS_DATA = [
 
 describe(
   "Area/Condo Specialist display",
-  {
-    viewportWidth: 375,
-    viewportHeight: 667,
-  },
   () => {
     it("Area search", () => {
       cy.visit("https://www.iproperty.com.my/sale/klcc/all-residential/");
@@ -63,8 +60,11 @@ describe(
       cy.get(containerSelector).should("not.inViewport");
 
       // TODO: scroll after 5th cards
+      
 
       // TODO: if api still loading, skeleton exist else container
+      
+      cy.get(containerSelector).should("inViewport");
 
       cy.get(titleSelector).should("contain", "Area specialists for");
     });
@@ -83,11 +83,6 @@ describe(
       cy.get(titleSelector).should("contain", "Condo specialists for");
 
       // TODO: all title should be same total count as CONDO_AGENTS_DATA
-
-      cy.get(saleAndRentSelector).should(
-        "contain",
-        `${CONDO_AGENTS_DATA[0].channelCounts.sale} for sale | ${CONDO_AGENTS_DATA[0].channelCounts.rent} for rent`
-      );
 
       // TODO: scroll after 9th cards
 

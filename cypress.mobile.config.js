@@ -7,7 +7,8 @@ module.exports = defineConfig({
     },
   },
   chromeWebSecurity: false,
-  userAgent: "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36 cypress-e2e",
-  viewportWidth: 1400,
-  viewportHeight: 900
+  userAgent:
+    "Mozilla/5.0 (Linux; Android 7.0; SM-G930V Build/NRD90M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.125 Mobile Safari/537.36",
+  viewportWidth: 375,
+  viewportHeight: 667,
 });

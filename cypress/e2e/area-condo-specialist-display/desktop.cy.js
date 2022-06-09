@@ -87,10 +87,13 @@ describe("Area/Condo Specialist display", () => {
 
     cy.get(containerSelector).should("exist");
 
-    // TOOD: title, subtitle should be exist
+    // TOOD: title should contain Area specialists for KLCC
+    
+    // TODO: subtitle should contain We have ${AREA_AGENTS_DATA's total} specialist(s) in this area
 
-    // TOOD: all agent name should be same total count as AREA_AGENTS_DATA
+    // TOOD: agentName, agencyname, saleAndRent, phoneNumber should be exist and same total as ${AREA_AGENTS_DATA's total}
 
-    // TODO: the first agent should be found in AREA_AGENTS_DATA
+    // TODO: the first agency name should be found in AREA_AGENTS_DATA
+    
   });
 });

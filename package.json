@@ -4,7 +4,8 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "cypress open"
+    "start": "cypress run --spec=cypress/e2e/area-condo-specialist-display/desktop.cy.js --browser chrome --headed --no-exit",
+    "start:mobile": "cypress run --config-file=cypress.mobile.config.js --spec=cypress/e2e/area-condo-specialist-display/mobile.cy.js --browser chrome --headed --no-exit"
   },
   "devDependencies": {
     "cypress": "^10.0.3"
