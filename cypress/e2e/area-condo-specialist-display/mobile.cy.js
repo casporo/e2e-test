@@ -17,28 +17,28 @@ const phoneNumberSelector = "div[class^AgentSpecialistCardstyle__PhoneNumber]";
 
 const AREA_AGENTS_DATA = [
   {
-    name: "Michelle Cheong",
-    contact: "+60165020868",
-    agency: "Landbanc Property Sdn. Bhd.",
-    channelCounts: { sale: 84, rent: 77 },
+    name: "Cruz Looi",
+    contact: "+60166526358",
+    agency: "Kith and Kin Realty Sdn. Bhd.",
+    channelCounts: { sale: 11, rent: 15 },
   },
   {
     name: "Don Lee",
     contact: "+60124700765",
     agency: "Metro City Realtors Sdn. Bhd. (MK)",
-    channelCounts: { sale: 321, rent: 24 },
+    channelCounts: { sale: 281, rent: 12 },
   },
   {
-    name: "Kevin Teh",
-    contact: "+60135557333",
-    agency: "IQI Realty Sdn Bhd - Desa Sri Hartamas",
-    channelCounts: { sale: 25, rent: 29 },
+    name: "Michelle Cheong",
+    contact: "+60165020868",
+    agency: "Landbanc Property Sdn. Bhd.",
+    channelCounts: { sale: 80, rent: 70 },
   },
   {
-    name: "Cruz Looi",
-    contact: "+60166526358",
+    name: "Carol Tong",
+    contact: "+60146832968",
     agency: "Kith and Kin Realty Sdn. Bhd.",
-    channelCounts: { sale: 9, rent: 19 },
+    channelCounts: { sale: 6, rent: 12 },
   },
 ];
 
@@ -46,8 +46,8 @@ const CONDO_AGENTS_DATA = [
   {
     name: "Cindy Ng",
     contact: "+60129881017",
-    agency: "JANWELL PROPERTIES SDN BHD",
-    channelCounts: { sale: 17, rent: 15 },
+    agency: "STARLIGHT PROPERTY SDN BHD",
+    channelCounts: { sale: 15, rent: 2 },
   },
 ];
 
