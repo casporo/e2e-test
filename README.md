@@ -33,6 +33,10 @@ Display Area & Condo specialist information
 -	Desktop view
 -	Mobile view
 
+**URL:** \
+[Area search](https://www.iproperty.com.my/sale/klcc/all-residential/) \
+[Condo search](https://www.iproperty.com.my/sale/mont-kiara/all-residential/?propertyId=69cb1a1af3d44ad4a087d0d9ca88fe81&property=Residensi%2022)
+
 ## Acceptance Criteria
 
 ### Area search - Desktop view
