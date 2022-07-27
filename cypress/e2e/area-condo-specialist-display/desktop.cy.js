@@ -67,10 +67,18 @@ describe("Area/Condo Specialist display", () => {
     cy.get(titleSelector).contains("Area specialists for KLCC")
     
     // TODO: subtitle should contain We have ${AREA_AGENTS_DATA's total} specialist(s) in this area
+    cy.get(subTitleSelector).contains("We have 7 specialist(s) in this area")
 
     // TOOD: agentName, agencyname, saleAndRent, phoneNumber should be exist and same total as ${AREA_AGENTS_DATA's total}
+    cy.get(agentNameSelector).should('have.length', 7)
+    cy.get(agencyNameSelector).should('have.length', 7)
+    cy.get(saleAndRentSelector).should('have.length', 7)
+    cy.get(phoneNumberSelector).should('have.length', 7)
 
     // TODO: the first agency name should be found in AREA_AGENTS_DATA
-    
+    cy
+    .get(agencyNameSelector)
+    .eq(0)
+
   });
 });
