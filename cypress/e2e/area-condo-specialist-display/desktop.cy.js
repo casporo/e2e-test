@@ -7,7 +7,7 @@ const subTitleSelector =
   "div[class^=AgentSpecialistDesktopCarouselstyle__SubTitle]";
 const agentNameSelector = "a[class^=AgentSpecialistCardstyle__Name]";
 // TODO: find agency name
-const agencyNameSelector = "";
+const agencyNameSelector = "div[class^=AgentSpecialistCardstyle__Organization";
 const saleAndRentSelector =
   "div[class^=AgentSpecialistCardstyle__ListingsCount]";
 const phoneNumberSelector = "div[class^AgentSpecialistCardstyle__PhoneNumber]";
@@ -64,6 +64,7 @@ describe("Area/Condo Specialist display", () => {
     cy.get(containerSelector).should("exist");
 
     // TOOD: title should contain Area specialists for KLCC
+    cy.get(titleSelector).contains("Area specialists for KLCC")
     
     // TODO: subtitle should contain We have ${AREA_AGENTS_DATA's total} specialist(s) in this area
 
