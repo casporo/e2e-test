@@ -6,11 +6,10 @@ const containerSelector =
   "div[class^=AgentSpecialistAsyncComponentsstyle__AgentSpecialistCarouselPlaceholder]";
 
 // TODO: find title
-const titleSelector =
-        "";
+const titleSelector = "div[class^=Filtersstyle__Row-DpPge OPMhk]";
 
 // TODO: find agency name
-const agencyNameSelector = "";
+const agencyNameSelector = "div[class^=HeadingAgencyLogo__Wrapper-bNBhLY hJEsO]";
 const saleAndRentSelector =
   "div[class^=AgentSpecialistCardstyle__ListingsCount]";
 const phoneNumberSelector = "div[class^AgentSpecialistCardstyle__PhoneNumber]";
