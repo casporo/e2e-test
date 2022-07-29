@@ -58,7 +58,20 @@ const AREA_AGENTS_DATA = [
 ];
 
 describe("Area/Condo Specialist display", () => {
+
+
+       //To try and get extract the information from AREA_AGENTS_DATA
+       /*cy.task("generateJSONfromHeader", { AREA_AGENTS_DATA })
+       .then((users) => {
+      dataListName = [...users].map(user => user.name)
+      dataListContact = [...users].map(user => user.Contact)
+      dataListAgency = [...users].map(user => user.agency)
+      dataListchannelCounts = [...users].map(user => user.channelCounts)
+      }))*/
+
+
   it("Area search", () => {
+
     cy.visit("https://www.iproperty.com.my/sale/klcc/all-residential/");
 
     cy.get(containerSelector).should("exist");
@@ -68,21 +81,8 @@ describe("Area/Condo Specialist display", () => {
     
     // TODO: subtitle should contain We have ${AREA_AGENTS_DATA's total} specialist(s) in this area
        cy.get(subTitleSelector).contains("We have 7 specialist(s) in this area")
-
-       //To try and get count of AREA_AGENTS_DATA
-       /*cy.task("generateJSONfromHeader", { AREA_AGENTS_DATA })
-             .then((users) => {
-               dataList = [...users].map(user => user.name)
-             }))
-
-         it('logs the loaded dataList', () => {
-
-           cy.log(dataList)
-           cy.log(dataList[1])
-           cy.log(dataList.length)
-         })*/
        // To ensure we can get the right count in the subtitle
-       //cy.get(subTitleSelector).contains("We have" + dataList.length + "specialist(s) in this area")
+       //cy.get(subTitleSelector).contains("We have" + dataListName.length + "specialist(s) in this area")
 
 
     // TOOD: agentName, agencyname, saleAndRent, phoneNumber should be exist and same total as ${AREA_AGENTS_DATA's total}
@@ -91,46 +91,21 @@ describe("Area/Condo Specialist display", () => {
     cy.get(saleAndRentSelector).should('have.length', 7)
     cy.get(phoneNumberSelector).should('have.length', 7)
 
-      //To try and get count of AREA_AGENTS_DATA
-           /*cy.task("generateJSONfromHeader", { AREA_AGENTS_DATA })
-                 .then((users) => {
-                   dataList = [...users].map(user => user.name)
-                 }))
-
-             it('logs the loaded dataList', () => {
-
-               cy.log(dataList)
-               cy.log(dataList[1])
-               cy.log(dataList.length)
-             })*/
-           // To ensure we can get the right count
-           /*
-            cy.get(agentNameSelector).should('have.length', dataList.length)
-            cy.get(agencyNameSelector).should('have.length', dataList.length)
-            cy.get(saleAndRentSelector).should('have.length', dataList.length)
-            cy.get(phoneNumberSelector).should('have.length', dataList.length)
-           */
+    // To ensure we can get the right count
+    /*
+    cy.get(agentNameSelector).should('have.length', dataListName.length)
+    cy.get(agencyNameSelector).should('have.length', dataListContact.length)
+    cy.get(saleAndRentSelector).should('have.length', dataListchannelCounts.length)
+    cy.get(phoneNumberSelector).should('have.length', dataListContact.length)
+    */
 
 
     // TODO: the first agency name should be found in AREA_AGENTS_DATA
-           //To try and get all the agency name and compare when
-           /*
-           cy.task("generateJSONfromHeader", { AREA_AGENTS_DATA })
-                 .then((users) => {
-                   dataList = [...users].map(user => user.agency)
-                 }))
-
-             it('logs the loaded dataList', () => {
-
-               cy.log(dataList)
-               cy.log(dataList[1])
-               cy.log(dataList.length)
-             })*/
     // To get the first agent name once the site is loaded
     cy.get(agentNameSelector).eq(0)
 
     // To verify the first agent name is present in the datalist
-    //cy.get(agentNameSelector).eq(0).contains(datalist)
+    //cy.get(agentNameSelector).eq(0).contains(dataListAgency)
 
   });
 });
